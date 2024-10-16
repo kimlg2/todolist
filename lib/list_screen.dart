@@ -19,7 +19,7 @@ class _ListScreenState extends State<ListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Todo list 리스트'),
+        title: const Text('할일 리스트'),
       ),
       body: ListView(
         children: todos.values
@@ -31,13 +31,14 @@ class _ListScreenState extends State<ListScreen> {
             .toList(),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
+        onPressed: ()async {
+         await Navigator.push(
               context,
               MaterialPageRoute(builder: (context) =>
               const CreateScreen(),
               ),
               );
+         setState(() {});
         },
         child: const Icon(Icons.add),
       ),
