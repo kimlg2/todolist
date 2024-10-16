@@ -7,7 +7,7 @@ class ListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Todo list 리스트'),
+        title: const Text('Todo list 리스트'),
       ),
       body: ListView(
         children: const [
